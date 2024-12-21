@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winter Boba Drops</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes snowfall {
+            0% { transform: translateY(-10vh) translateX(0); opacity: 1; }
+            100% { transform: translateY(100vh) translateX(20px); opacity: 0.3; }
+        }
+        .snowflake {
+            position: fixed;
+            color: white;
+            animation: snowfall 15s linear infinite;
+        }
+        .boba {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(circle at 30% 30%, #4B5563, #1F2937);
+            border-radius: 50%;
+            filter: drop-shadow(0 0 2px rgba(255,255,255,0.3));
+        }
+        .ornament {
+            position: fixed;
+            font-size: 24px;
+            animation: swing 3s ease-in-out infinite;
+        }
+        .lights {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            animation: twinkle 1.5s ease-in-out infinite;
+        }
+        @keyframes swing {
+            0%, 100% { transform: rotate(-10deg); }
+            50% { transform: rotate(10deg); }
+        }
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white relative overflow-x-hidden">
+    <!-- Enhanced Animated Elements -->
+    <div class="fixed w-full h-full pointer-events-none">
+        <!-- Christmas Lights -->
+        <div class="lights bg-red-500" style="left:5%;top:0"></div>
+        <div class="lights bg-green-500" style="left:15%;top:0"></div>
+        <div class="lights bg-yellow-500" style="left:25%;top:0"></div>
+        <div class="lights bg-blue-500" style="left:35%;top:0"></div>
+
+        <!-- Ornaments -->
+        <div class="ornament" style="left:20%;top:10%">🎄</div>
+        <div class="ornament" style="left:40%;top:15%">🎅</div>
+        <div class="ornament" style="left:60%;top:12%">🦌</div>
+        <div class="ornament" style="left:80%;top:8%">🎁</div>
+
+        <!-- Existing snowflakes with enhanced positioning -->
+        <div class="snowflake" style="left:15%;animation-delay:0s">❄️</div>
+        <div class="snowflake" style="left:15%;animation-delay:2s">❅</div>
+        <div class="snowflake" style="left:25%;animation-delay:4s">❆</div>
+        <div class="snowflake" style="left:35%;animation-delay:6s">❄️</div>
+        <div class="snowflake" style="left:45%;animation-delay:8s">❅</div>
+        <div class="snowflake" style="left:55%;animation-delay:10s">❄️</div>
+        <div class="snowflake" style="left:65%;animation-delay:12s">❆</div>
+        <div class="snowflake" style="left:75%;animation-delay:14s">❅</div>
+        <div class="snowflake" style="left:85%;animation-delay:16s">❄️</div>
+        <div class="snowflake" style="left:95%;animation-delay:18s">❆</div>
+        <div class="boba" style="left:10%;top:20%;animation:snowfall 20s linear infinite;background: radial-gradient(circle at 30% 30%, #ef4444, #7f1d1d)"></div>
+        <div class="boba" style="left:30%;top:40%;animation:snowfall 25s linear infinite;background: radial-gradient(circle at 30% 30%, #22c55e, #14532d)"></div>
+        <div class="boba" style="left:50%;top:60%;animation:snowfall 22s linear infinite;background: radial-gradient(circle at 30% 30%, #eab308, #854d0e)"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-gray-800/80 backdrop-blur-md border-b border-gray-700">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div class="flex items-center py-4">
+                        <span class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">❄️ Boba Drops</span>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-8">
+                    <a href="#" class="text-gray-300 hover:text-blue-400 transition-colors">Home</a>
+                    <a href="#" class="text-gray-300 hover:text-blue-400 transition-colors">Menu</a>
+                    <a href="#" class="text-gray-300 hover:text-blue-400 transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative min-h-screen">
+        <div class="absolute inset-0 bg-gradient-to-b from-gray-900 via-blue-900/50 to-purple-900/30"></div>
+        <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
+        <div class="relative max-w-6xl mx-auto px-4 pt-32">
+            <div class="text-center">
+                <h1 class="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">Winter Wonderland Boba</h1>
+                <p class="text-2xl mb-8 text-blue-200">Discover our magical winter collection of bubble tea drinks</p>
+                <button class="bg-gradient-to-r from-blue-500 to-purple-600 px-8 py-4 rounded-full font-semibold hover:from-blue-600 hover:to-purple-700 transition-all transform hover:scale-105 shadow-lg shadow-blue-500/25">
+                    Order Now
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Drinks -->
+    <div class="max-w-6xl mx-auto px-4 py-16">
+        <h2 class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Winter Specials ❄️</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Drink Cards -->
+            <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl overflow-hidden border border-gray-700 hover:border-red-500 transition-all transform hover:scale-105">
+                <div class="h-48 bg-gradient-to-br from-red-500/20 to-green-500/20">
+                    <img src="https://nypost.com/wp-content/uploads/sites/2/2024/05/summer-come-early-starbucks-fans-81403313.jpg?w=1024" alt="Frost Berry Dream" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2 text-red-300">Frost Berry Dream</h3>
+                    <p class="text-gray-400">Mixed berries with crystal boba ❄️</p>
+                    <p class="text-red-400 font-bold mt-4">$6.49</p>
+                </div>
+            </div>
+            <!-- Black Pearl Card -->
+            <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl overflow-hidden border border-gray-700 hover:border-green-500 transition-all transform hover:scale-105">
+                <div class="h-48 bg-gradient-to-br from-gray-500/20 to-black/20">
+                    <img src="https://www.honestfoodtalks.com/wp-content/uploads/2024/03/How-to-make-bubble-tea-at-home-500x500.jpg" alt="Classic Black Pearl" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2 text-green-300">Classic Black Pearl</h3>
+                    <p class="text-gray-400">Rich milk tea with black pearl boba 🎄</p>
+                    <p class="text-green-400 font-bold mt-4">$5.99</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- New Festive Boba Cards -->
+    <div class="max-w-6xl mx-auto px-4 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Festive Boba Card 1 -->
+            <div class="relative group overflow-hidden rounded-2xl">
+                <img src="https://images.unsplash.com/photo-1525803377221-4f6ccdaa5133" 
+                     alt="Classic Milk Tea" 
+                     class="w-full h-64 object-cover transform transition-transform group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent">
+                    <div class="absolute bottom-4 left-4">
+                        <h3 class="text-xl font-bold text-white">Winter Pearl</h3>
+                        <p class="text-gray-200">Classic milk tea with black pearls ❄️</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Festive Boba Card 3 -->
+            <div class="relative group overflow-hidden rounded-2xl">
+                <img src="https://images.unsplash.com/photo-1527661591475-527312dd65f5" 
+                     alt="Holiday Special" 
+                     class="w-full h-64 object-cover transform transition-transform group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent">
+                    <div class="absolute bottom-4 left-4">
+                        <h3 class="text-xl font-bold text-white">Berry Christmas</h3>
+                        <p class="text-gray-200">Mixed berries with holiday pearls 🎅</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800/80 backdrop-blur-md border-t border-gray-700">
+        <div class="max-w-6xl mx-auto px-4 py-8">
+            <div class="text-center">
+                <h3 class="text-2xl font-bold mb-4 bg-gradient-to-r from-red-400 to-green-400 bg-clip-text text-transparent">Boba Drops</h3>
+                <div class="mt-4">
+                    <p class="text-gray-500">© 2024 Boba Drops. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
